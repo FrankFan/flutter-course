@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
-import './product_manager.dart';
+import './RandomWordsState.dart';
+import './IssueList.dart';
 
-main() => runApp(MyApp());
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.deepOrange,
-        accentColor: Colors.deepPurple,
+    return new MaterialApp(
+      title: 'Welcome to Flutter',
+      theme: new ThemeData(
+        primaryColor: Colors.white,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('EasyList demo'),
-        ),
-        body: ProductManager(startingProduct: 'Food Tester'),
-      ),
+      // home: new RandomWords(),
+      home: new IssueList(title: 'flutter issue list'),
     );
   }
 }
